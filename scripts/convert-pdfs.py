@@ -75,7 +75,7 @@ def parse_pdf(path, year):
 
 def main():
     HERE = os.path.dirname(os.path.abspath(__file__))
-    for year in range(2007, 2017):
+    for year in range(2007, 2018):
         print(year)
         pdf_path = os.path.join(HERE, "../pdfs/mls-salaries-{0}.pdf".format(year))
         csv_path = os.path.join(HERE, "../csvs/mls-salaries-{0}.csv".format(year))
