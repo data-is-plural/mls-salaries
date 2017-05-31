@@ -9,11 +9,6 @@ COLUMNS = [
     "position", "base_salary", "guaranteed_compensation"
 ]
 
-V_SEPARATORS = {
-    "narrow": [ 0, 90, 185, 280, 330, 425, 540 ],
-    "wide": [ 0, 110, 203, 300, 340, 425, 540 ]
-}
-
 NON_MONEY_CHAR_PAT = re.compile(r"[^\d\.]")
 
 def parse_money(money_str):
@@ -23,18 +18,55 @@ def parse_money(money_str):
     else:
         return None
 
+def get_data_bbox(page):
+    words = page.extract_words()
+    texts = [ w["text"] for w in words ]
+    first_cell_ix = texts.index("Compensation") + 1
+    last_cell_ix = texts.index("Source:")
+    data_words = words[first_cell_ix:last_cell_ix]
+    dw_df = pd.DataFrame(data_words)
+
+    return (
+        dw_df["x0"].min(),
+        dw_df["top"].min(),
+        dw_df["x1"].max(),
+        dw_df["bottom"].max(),
+    )
+
+def get_gutters(cropped):
+    x0s = pd.DataFrame(cropped.chars)["x0"].astype(float)\
+        .sort_values()\
+        .drop_duplicates()
+
+    gutter_ends = pd.DataFrame({
+        "x0": x0s,
+        "dist": x0s - x0s.shift(1),
+    }).sort_values("dist", ascending=False)\
+        .pipe(lambda x: x[x["dist"] > 10])["x0"].sort_values()\
+        .astype(int).tolist()
+
+    return gutter_ends
+
 def parse_page(page, year):
-    t = dict(x_tolerance=5, y_tolerance=5)
-    v = V_SEPARATORS["narrow" if year == 2007 else "wide"]
-    table = page.extract_table(v=v, h="gutters", **t)
-    df = pd.DataFrame(table)
-    header_i = df[df[0] == "Club"].index[0]
-    footer_i = df[df.fillna("").apply(lambda x: "Source" in "".join(x), axis=1)].index[0]
-    main = df.loc[header_i + 1:footer_i-1].copy()
-    main.columns = COLUMNS
-    main["base_salary"] = main["base_salary"].apply(parse_money)
-    main["guaranteed_compensation"] = main["guaranteed_compensation"].apply(parse_money)
-    return main
+    sys.stderr.write("{}, page {}\n".format(year, page.page_number))
+
+    data_bbox = get_data_bbox(page)
+    cropped = page.within_bbox(data_bbox)
+    gutters = get_gutters(cropped)
+
+    v_lines = [ cropped.bbox[0] ] + gutters  + [ cropped.bbox[2] ]
+
+    table = cropped.extract_table({
+        "vertical_strategy": "explicit",
+        "explicit_vertical_lines": v_lines,
+        "horizontal_strategy": "text",
+    })
+
+    df = pd.DataFrame(table, columns=COLUMNS)
+    df["base_salary"] = df["base_salary"].apply(parse_money)
+    df["guaranteed_compensation"] = df["guaranteed_compensation"].apply(parse_money)
+
+    return df
 
 def parse_pdf(path, year):
     with pdfplumber.open(path) as pdf:

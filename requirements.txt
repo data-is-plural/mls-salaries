@@ -1,2 +1,2 @@
-pdfplumber>=0.4
+pdfplumber==0.5.5
 pandas

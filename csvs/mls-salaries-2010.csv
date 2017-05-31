@@ -27,7 +27,7 @@ CLB,Barros Schelotto,Guillermo,M-F,140000.0,241250.0
 COL,Baudet,Julien,D,168000.0,181750.0
 KC,Beasley,Jamar,M,40000.0,40000.0
 RSL,Beckerman,Kyle,M,250000.0,250000.0
-LA,Beckham,David,M,5500000.0,86500000.04
+LA,Beckham,David,M,5500000.08,6500000.04
 SJ,Beitashour,Steven,D,40000.0,40000.0
 RSL,Beltran,Anthony,D,75000.0,110500.0
 DAL,Benitez,Jair,D,42000.0,63250.0
@@ -92,7 +92,7 @@ DAL,Cunningham,Jeffrey,F,220000.0,230125.0
 NY,Da Luz,Austin,M,40000.0,52125.0
 SJ,Da Silva,Eduardo,F,48000.0,48000.0
 DAL,Davies,Kyle,D,57500.0,57500.0
-HOU,Davis,Brad,M,215000.0,4258062.54
+HOU,Davis,Brad,M,215000.04,258062.54
 TFC,de Guzman,Julian,M,1670796.0,1717546.0
 LA,DeLaGarza,AJ,D,45100.0,45100.0
 CHV,Delgado,Dario,D,42000.0,42000.0
@@ -161,7 +161,7 @@ DAL,Harris,Atiba,M-F,68970.0,71970.0
 DAL,Hartman,Kevin,GK,75000.0,80000.0
 PHI,Harvey,Jordan,D,55000.0,56250.0
 CLB,Hejduk,Frankie,M,120000.0,127500.0
-NY,Henry,Thierry,F,5000000.0,45600000.04
+NY,Henry,Thierry,F,5000000.04,5600000.04
 KC,Hercegfalvi,Zoltan,F,168000.0,168000.0
 DAL,Hernandez,Daniel,M-D,100000.0,112500.0
 DAL,Hernandez,Moises,D,31260.0,31260.0
@@ -176,27 +176,27 @@ Pool,Horwath,Alex,GK,40000.0,40000.0
 TFC,Hscanovics,Raivis,D,114000.0,120250.0
 SEA,Hurtado,John Kennedy,D,120000.0,121000.0
 CHI,Husidic,Baggio,M,75000.0,117000.0
-SEA I,anni,Patrick,D,75600.0,75600.0
-TFC I,brahim,Fuad,F,100000.0,133000.0
-DAL I,hemelu,Ugo,D,150000.0,150000.0
-CLB I,ro,Andy,D,52360.0,71110.0
-PHI J,acobson,Andrew,M,40000.0,40000.0
-DC J,akovic,Dejan,D,147600.0,167102.5
-DC J,ames,Julius,D,52085.0,61460.0
-NE J,ankauskas,Edgaras,F,240000.0,240000.0
-SEA J,aqua,Nate,F,150000.0,157000.0
-SJ J,assey,Omar,M,42000.0,47500.0
-CHV J,azic,Ante,D,105000.0,113500.0
-KC J,ewsbury,Jack,D,145000.0,154125.0
-CHI J,ohn,Collins,F,160000.0,181875.0
-DAL J,ohn,George,D,40000.0,40000.0
-CHI J,ohnson,Sean,GK,55000.0,88000.0
-RSL J,ohnson,Will,F,76320.0,89891.43
-SJ J,ohnson,Ryan,M,125000.0,125000.0
-LA J,ordan,Bryan,F,40000.0,40000.0
-NE J,oseph,Shalrie,M,450000.0,475000.0
-TFC J,oseph,Nane,M,40000.0,40000.0
-COL J,oyce,Ian,GK,54000.0,54000.0
+SEA,Ianni,Patrick,D,75600.0,75600.0
+TFC,Ibrahim,Fuad,F,100000.0,133000.0
+DAL,Ihemelu,Ugo,D,150000.0,150000.0
+CLB,Iro,Andy,D,52360.0,71110.0
+PHI,Jacobson,Andrew,M,40000.0,40000.0
+DC,Jakovic,Dejan,D,147600.0,167102.5
+DC,James,Julius,D,52085.0,61460.0
+NE,Jankauskas,Edgaras,F,240000.0,240000.0
+SEA,Jaqua,Nate,F,150000.0,157000.0
+SJ,Jassey,Omar,M,42000.0,47500.0
+CHV,Jazic,Ante,D,105000.0,113500.0
+KC,Jewsbury,Jack,D,145000.0,154125.0
+CHI,John,Collins,F,160000.0,181875.0
+DAL,John,George,D,40000.0,40000.0
+CHI,Johnson,Sean,GK,55000.0,88000.0
+RSL,Johnson,Will,F,76320.0,89891.43
+SJ,Johnson,Ryan,M,125000.0,125000.0
+LA,Jordan,Bryan,F,40000.0,40000.0
+NE,Joseph,Shalrie,M,450000.0,475000.0
+TFC,Joseph,Nane,M,40000.0,40000.0
+COL,Joyce,Ian,GK,54000.0,54000.0
 KC,Kamara,Kei,F,180000.0,182500.0
 NY,Kandji,Macoumba,F,85000.0,112988.37
 SEA,Keller,Kasey,GK,300000.0,300000.0
@@ -221,11 +221,11 @@ PHI,Le Toux,Sebastian,M,110000.0,122000.0
 KC,Leathers,Jonathan,D,40000.0,40000.0
 SJ,Leitch,Chris,D,101000.0,101000.0
 CLB,Lenhart,Steven,F,40000.0,42333.34
-SEA,Levesque,Roger,F,40000.0,840000.08
+SEA,Levesque,Roger,F,40000.08,40000.08
 LA,Lewis,Eddie,M,96000.0,99333.33
 DAL,Leyva,Bryan,M,45000.0,60833.33
 CHV,Lillingston,Eduardo,F,100000.0,100000.0
-NE,Linck,Roberto,F-M,40000.0,840000.08
+NE,Linck,Roberto,F-M,40000.08,40000.08
 NY,Lindpere,Joel,M,80000.0,115000.0
 CHI,Ljungberg,Fredrik,M,1300000.0,1314000.0
 COL,Lopez,Claudio,F,120000.0,120000.0
@@ -280,7 +280,7 @@ NY,Nielsen,Brian,M,156000.0,156000.0
 RSL,Nimo,Alex,F-M,75000.0,108000.0
 SEA,Nkufo,Blaise,F,480000.0,480000.0
 SEA,Noonan,Pat,F,96000.0,96000.0
-PHI,Noone,JT,M,40012.0,840012.08
+PHI,Noone,JT,M,40012.08,40012.08
 CHI,Nyarko,Patrick,F,80000.0,160000.0
 NE,Nyassi,Sainey,M,70000.0,76750.0
 SEA,Nyassi,Sanna,M,40000.0,40000.0
@@ -300,7 +300,7 @@ CLB,Padula,Gino,D,165000.0,190000.0
 COL,Palguta,Scott,D,57750.0,57750.0
 HOU,Palmer,Lovel,M,60000.0,71250.0
 CHI,Pappa,Marco,M,108000.0,108000.0
-SEA,Parke,Jeff,D,99999.9,699999.96
+SEA,Parke,Jeff,D,99999.96,99999.96
 CHI,Pause,Logan,M,160000.0,168125.0
 DAL,Pearce,Heath,D,198000.0,207500.0
 DC,Pena,Juan,D,40000.0,40000.0
@@ -353,7 +353,7 @@ CHI,Segares,Gonzalo,D,60000.0,67750.0
 PHI,Seitz,Chris,GK,100000.0,135500.0
 HOU,Serioux,Adrian,D,96000.0,96000.0
 LA,Sesay,Israel,F,75000.0,107083.33
-DC,Shanosky,Conor,D,31250.0,437135.54
+DC,Shanosky,Conor,D,31250.04,37135.54
 Pool,Sharpe,Christopher,GK,40000.0,40000.0
 DAL,Shea,Brek,M-D,75000.0,108000.0
 NE,Shuttleworth,Robert,GK,40000.0,40000.0
